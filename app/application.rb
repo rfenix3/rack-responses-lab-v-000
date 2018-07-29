@@ -4,9 +4,9 @@ class Application
     resp = Rack::Response.new
 
     t = Time.now
-    t_integer = t.strftime("%H%M%S").to_i
+    t_integer = t.strftime("%H%M").to_i
 
-    if t_integer > 120000
+    if t_integer > 1200
       resp.write "Good Afteroon!"
     else
       resp.write "Good Morning!"
