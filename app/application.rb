@@ -7,7 +7,7 @@ class Application
     t_integer = t.strftime("%H%M").to_i
 
     if t_integer > 1200
-      resp.write "Good Afteroon!"
+      resp.write "Good Afternoon!"
     else
       resp.write "Good Morning!"
     end
