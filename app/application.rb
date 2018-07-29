@@ -1,21 +1,20 @@
 require 'pry'
 
 class Application
- 
+
   def call(env)
     resp = Rack::Response.new
- 
+
     t = Time.now
-    t.strftime(%H%M%S)
-    binding.pry
- 
-    if num_1==num_2 && num_2==num_3
-      resp.write "You Win"
+    t_integer = t.strftime("%H%M%S").to_i
+
+    if t_integer > 120000
+      resp.write "Good Afteroon!"
     else
-      resp.write "You Lose"
+      resp.write "Good Morning!"
     end
- 
+
     resp.finish
   end
- 
+
 end
